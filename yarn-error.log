@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add --dev react-devtools
+  /usr/local/bin/node /usr/local/bin/yarn add shortid
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/Users/maciejkusztal/Documents/GitHub/to-do-app/node_modules/cross-spawn/node_modules/which'
+  Error: EACCES: permission denied, unlink '/Users/maciejkusztal/Documents/GitHub/to-do-app/node_modules/.bin/acorn'
 
 npm manifest: 
   {
