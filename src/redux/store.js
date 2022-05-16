@@ -3,6 +3,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import initialState from './initialState';
 import shortid from 'shortid';
 
+//selectors
+export const getFilteredCards = (state, columnId) =>
+  state.cards.filter(
+    (card) =>
+      card.columnId === columnId &&
+      card.title.toLowerCase().includes(state.searchString.toLowerCase())
+  );
+
 const reducer = (state, action) => {
   /* state- current state, action- object informed what we should do */
   switch (action.type) {
