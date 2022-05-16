@@ -9,12 +9,12 @@ const reducer = (state, action) => {
     case 'ADD_COLUMN':
       return {
         ...state,
-        columns: [...state.columns, { id: shortid(), ...action.payload }],
+        columns: [...state.columns, { ...action.payload, id: shortid() }],
       };
     case 'ADD_CARD':
       return {
         ...state,
-        cards: [...state.cards, { id: shortid(), ...action.payload }],
+        cards: [...state.cards, { ...action.payload, id: shortid() }],
       };
     case 'UPDATE_SEARCH':
       return {
