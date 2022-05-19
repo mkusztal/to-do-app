@@ -23,6 +23,8 @@ export const getColumnsByList = ({ columns }, listId) =>
 
 export const getAllLists = (state) => state.lists;
 
+export const searchInputValue = (state) => state.searchInput;
+
 // action creators
 export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
