@@ -1,0 +1,19 @@
+@import '../../styles/settings.scss';
+
+.wrapper {
+  font-size: $base-size * 2;
+  padding-left: $base-size * 10;
+  padding-right: $base-size * 10;
+  display: flex;
+  justify-content: space-between;
+  background-color: darken($color-dark, 3%);
+  align-items: center;
+}
+
+.navMenu {
+  list-style: none;
+  display:  inline-flex;
+  li {
+    padding: $base-size;
+  }
+}
