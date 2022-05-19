@@ -4,8 +4,8 @@ const NavBar = () => {
   return (
     <nav>
       <div className={styles.wrapper}>
-        <span className="logo"></span>
-        <ul class={styles.navMenu}>
+        <i className="fa fa-rocket"></i>
+        <ul className={styles.navMenu}>
           <li>Home</li>
           <li>Favourite</li>
           <li>About</li>

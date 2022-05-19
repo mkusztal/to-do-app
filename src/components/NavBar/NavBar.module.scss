@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '../../styles/settings.scss';
 
 .wrapper {
@@ -12,8 +13,13 @@
 
 .navMenu {
   list-style: none;
-  display:  inline-flex;
+  display: inline-flex;
   li {
     padding: $base-size;
   }
+}
+
+i {
+  color: white;
+  font-size: $base-size * 2;
 }
