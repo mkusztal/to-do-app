@@ -19,7 +19,16 @@
   }
 }
 
-i {
+.wrapper i {
   color: white;
   font-size: $base-size * 2;
+}
+
+li {
+  padding: $base-size;
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
 }

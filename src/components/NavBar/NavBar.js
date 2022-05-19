@@ -6,9 +6,15 @@ const NavBar = () => {
       <div className={styles.wrapper}>
         <i className="fa fa-rocket"></i>
         <ul className={styles.navMenu}>
-          <li>Home</li>
-          <li>Favourite</li>
-          <li>About</li>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/favorite">Favorite</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
         </ul>
       </div>
     </nav>
