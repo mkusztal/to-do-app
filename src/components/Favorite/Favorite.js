@@ -6,13 +6,19 @@ import { getFilteredCards } from '../../redux/store';
 
 const Favorite = () => {
   const favoriteCards = useSelector((state) => getFilteredCards(state));
+  console.log('favoriteCards: ', favoriteCards);
 
   return (
     <div className={styles.hero}>
       <PageTitle title="Favorite" />
       <ul className={styles.cards}>
         {favoriteCards.map((card) => (
-          <Card key={card.id} title={card.title} isFavorite={card.isFavorite} />
+          <Card
+            key={card.id}
+            cardId={card.id}
+            title={card.title}
+            isFavorite={card.isFavorite}
+          />
         ))}
       </ul>
     </div>
