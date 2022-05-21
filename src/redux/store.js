@@ -33,6 +33,10 @@ export const updateSearch = (payload) => ({
   type: 'UPDATE_SEARCH',
   payload,
 });
+export const addToFavorite = (payload) => ({
+  type: 'ADD_TO_FAVORITE)',
+  payload,
+});
 
 const reducer = (state, action) => {
   /* state- current state, action- object informed what we should do */
@@ -56,6 +60,15 @@ const reducer = (state, action) => {
       return {
         ...state,
         ...action.payload,
+      };
+    case 'TOGGLE_CARD_FAVORITE':
+      return {
+        ...state,
+        cards: state.cards.map((card) =>
+          card.id === action.payload
+            ? { ...card, isFavorite: !card.isFavorite }
+            : card
+        ),
       };
     default:
       return state;

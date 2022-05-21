@@ -11,3 +11,15 @@
   justify-content: space-between;
   font-weight: bold;
 }
+
+.favorite_button {
+  background-color: $color-light;
+  border: none;
+  i {
+    font-size: 16px;
+  }
+}
+
+.isFavorite {
+  color: $color-favorite;
+}
