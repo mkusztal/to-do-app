@@ -7,10 +7,11 @@ import clsx from 'clsx';
 const Card = (props) => {
   const [isFavorite, setIsFavorite] = useState(props.isFavorite);
   const dispatch = useDispatch();
+  const cardId = props.cardId;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addToFavorite({ isFavorite }));
+    dispatch(addToFavorite({ cardId }));
     setIsFavorite(!isFavorite);
   };
 

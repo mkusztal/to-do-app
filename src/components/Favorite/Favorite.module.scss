@@ -1,0 +1,17 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+
+.title {
+  color: white;
+  padding: ($base-size * 3) 0;
+  text-align: center;
+  font-size: ($base-size * 3);
+  text-transform: uppercase;
+}
+
+.cards {
+  padding: math.div($base-size, 2) 0;
+  width: calc(33% - 12px);
+  margin: 0 auto;
+  color: $color-dark;
+}
