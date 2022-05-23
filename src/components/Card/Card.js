@@ -13,6 +13,7 @@ const Card = (props) => {
     e.preventDefault();
     setIsFavorite(!isFavorite);
     dispatch(addToFavorite({ cardId }));
+    console.log('addToFavorite: ', addToFavorite);
   };
 
   const handleRemoveCard = (e) => {

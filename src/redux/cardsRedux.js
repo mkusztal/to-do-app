@@ -32,7 +32,7 @@ const cardsReducer = (statePart = [], action) => {
       return statePart.filter((card) => card.id !== action.payload);
     case TOGGLE_CARD_FAVORITE:
       return statePart.map((card) =>
-        card.id === action.payload
+        card.id === action.payload.cardId
           ? { ...card, isFavorite: !card.isFavorite }
           : card
       );
