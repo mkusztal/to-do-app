@@ -25,12 +25,12 @@ const Card = (props) => {
     <li className={styles.card}>
       {props.title}
       <button
-        className={clsx(styles.card_button, isFavorite && styles.isFavorite)}
+        className={clsx(styles.star_button, isFavorite && styles.isFavorite)}
         onClick={handleAddToFavorite}
       >
         <i className="fa fa-star-o"></i>
       </button>
-      <button className={styles.card_button} onClick={handleRemoveCard}>
+      <button className={styles.trash_button} onClick={handleRemoveCard}>
         <i className="fa fa-trash"></i>
       </button>
     </li>

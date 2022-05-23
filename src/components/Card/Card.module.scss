@@ -8,16 +8,34 @@
   margin: 0 0 $base-size 0;
   border-radius: $radius;
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   font-weight: bold;
 }
 
-.card_button {
+.star_button {
   background-color: $color-light;
   border: none;
-  padding-left: 0;
+  position: absolute;
+  left: 80%;
   i {
     font-size: 16px;
+  }
+}
+
+.trash_button {
+  background-color: $color-light;
+  border: none;
+  position: absolute;
+  left: 90%;
+  i {
+    font-size: 16px;
+  }
+}
+
+.star_button:hover,
+.trash_button:hover {
+  i {
+    transform: scale(1.5);
   }
 }
 
