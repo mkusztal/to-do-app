@@ -9,13 +9,13 @@ const Card = (props) => {
   const dispatch = useDispatch();
   const cardId = props.cardId;
 
-  const handleSubmit = (e) => {
+  const handleAddToFavorite = (e) => {
     e.preventDefault();
-    dispatch(addToFavorite({ cardId }));
     setIsFavorite(!isFavorite);
+    dispatch(addToFavorite({ cardId }));
   };
 
-  const handleRemove = (e) => {
+  const handleRemoveCard = (e) => {
     e.preventDefault();
     dispatch(removeCard({ cardId }));
   };
@@ -25,11 +25,11 @@ const Card = (props) => {
       {props.title}
       <button
         className={clsx(styles.card_button, isFavorite && styles.isFavorite)}
-        onClick={handleSubmit}
+        onClick={handleAddToFavorite}
       >
         <i className="fa fa-star-o"></i>
       </button>
-      <button className={styles.card_button} onClick={handleRemove}>
+      <button className={styles.card_button} onClick={handleRemoveCard}>
         <i className="fa fa-trash"></i>
       </button>
     </li>

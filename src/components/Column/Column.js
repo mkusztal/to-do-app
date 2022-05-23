@@ -6,7 +6,7 @@ import { getFilteredCards } from '../../redux/cardsRedux';
 
 const Column = (props) => {
   const cards = useSelector((state) => getFilteredCards(state, props.id));
-  console.log('Column render');
+  // console.log('Column render');
 
   return (
     <article className={styles.column}>
@@ -16,7 +16,13 @@ const Column = (props) => {
       </h2>
       <ul className={styles.cards}>
         {cards.map((card) => (
-          <Card key={card.id} {...card} isFavorite={card.isFavorite} />
+          <Card
+            key={card.id}
+            title={card.title}
+            isFavorite={card.isFavorite}
+            cardId={card.id}
+            columnId={card.columnId}
+          />
         ))}
       </ul>
       <CardForm columnId={props.id} />
@@ -25,5 +31,3 @@ const Column = (props) => {
 };
 
 export default Column;
-
-// {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
