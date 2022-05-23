@@ -31,14 +31,11 @@ const cardsReducer = (statePart = [], action) => {
     case REMOVE_CARD:
       return statePart.filter((card) => card.id !== action.payload);
     case TOGGLE_CARD_FAVORITE:
-      return {
-        ...statePart,
-        cards: statePart.cards.map((card) =>
-          card.id === action.payload
-            ? { ...card, isFavorite: !card.isFavorite }
-            : card
-        ),
-      };
+      return statePart.map((card) =>
+        card.id === action.payload
+          ? { ...card, isFavorite: !card.isFavorite }
+          : card
+      );
     default:
       return statePart;
   }
